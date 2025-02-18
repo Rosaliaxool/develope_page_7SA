@@ -66,6 +66,12 @@ html{
     background-color: var(--Morado);
     color:var(--oscuro);
 }
+.hero
+backdrop-image: url("../img/hero.jpg");
+backdrop-repeat: no-repeat;
+/*cover cubre la imagen con todo el tamaño posible*/
+background-size: cover;
+
 /*apartir de aqui se puede editar el recuadro de contactos*/
 .formulario{
     width: min(60rem, 90%);
