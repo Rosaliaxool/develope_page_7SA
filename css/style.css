@@ -1,5 +1,5 @@
 :root{
-    --blanco: #ffffff;
+    --Morado:  #8a00ca;
     --oscuro: #212121;
     --primario: #ffc107;
     --secundario: #0097a7;
@@ -63,7 +63,56 @@ html{
 }
 
 .navegacion-principal a:hover{
-    background-color: var(--primario);
+    background-color: var(--Morado);
     color:var(--oscuro);
 }
-
+/*apartir de aqui se puede editar el recuadro de contactos*/
+.formulario{
+    width: min(60rem, 90%);
+    margin: 5rem auto 0 auto;
+    background-color: #757575;
+    padding: 2rem;
+    line-height: 2;
+    border-radius: 17%;
+}
+.formulario fieldset{
+    border: none;
+}
+legend{
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    color: white;
+}
+label{
+    display: block;
+    width: 90%;
+    color: white;
+    text-align: center;
+}
+input:not([type="submit"]),/*impide que se seleccione el boton */
+textarea,
+select{/*es para seleccinar los input en los labels*/
+    padding: 1rem;
+    display:flex;
+    width: 90%;
+    background-color: #e1e1e1;
+    margin-bottom: 2rem;
+    border: none;
+    border-radius: 1rem;
+}
+input[type="submit"]{/*Modificacion de boton*/
+    margin: 0 auto;
+    display: block;
+    background-color: #8a00ca;
+    width: 80%;
+    border: none;
+    padding: 1rem;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 900;
+    border-radius: 1rem;
+    cursor: pointer;
+}

@@ -7,20 +7,23 @@
     <!--siempre va primero normalize-->
     <link rel="preload" href="css/normalize.css" as="style">
     <link rel="stylesheet" href="css/normalize.css">
+    <!--fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
 
     <!--importar gool fonts-->
 
     <link rel="preload" href="css/styles.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="./css/style.css">
     <title>RX Dev</title>
 </head>
 <body>
-    <header> <!--encabezado-->
-    <h1 class="titulo">Rosalia Xool<span>Develope</span>r</h1>
+<header> <!--encabezado-->
+    <h1 class="titulo">Rosalia Xool<span>Developer</span></h1>
     </header>
 <div class="nav-bg">
     <nav class="navegacion-principal contenedor">
-        <a href=></a>
         <a href="#">Inicio</a>
         <a href="#">Sobre mí</a>
         <a href="#">Clientes</a>
@@ -81,39 +84,38 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, illum eum nam consequatur dolor veniam facere placeat rem. Harum voluptatem sint deleniti velit facilis, suscipit quos ullam esse laudantium culpa.</p>
     </svg>
     </section>
-
-</main>
-<section>
-    <h2>Contactos</h2>
-    <form>
-        <fieldset>
-            <legend>llena tus datos para establecer contacto</legend>
-                
+    <section>
+        <h2>Contacto</h2>
+        <form class="formulario">
+            <fieldset>
+                <legend>Llena tus datos de contacto.</legend>
                 <div>
-                    <label> Nombre</label>
-                    <input type="text"placeholder="Tu nombre">
+                    <label>Nombre</label>
+                    <B></B>
+                    <input type="name" placeholder="Nombre">
                 </div>
-                
                 <div>
-                    <label> Telefono</label>
-                    <input type="tel"placeholder="Tu telefono">
+                    <label>Teléfono</label>
+                    <B></B>
+                    <input type="Phone" placeholder="Teléfono">
                 </div>
-
                 <div>
-                    <label> Correo</label>
-                    <input type="email"placeholder="Tu email">
+                    <label>Correo</label>
+                    <B></B>
+                    <input type="email" placeholder="Email">
                 </div>
-
                 <div>
-                    <label>Mensaje</label>
-                <textarea></textarea>
+                    <label style="display: block;">Mensaje</label>
+                    <textarea rows="10 " cols="30" style="resize: none;">Mensaje</textarea>
                 </div>
                 <div>
                     <input type="submit" value="Enviar">
                 </div>
-        </fieldset>
-    </form>
-</section>
+            </fieldset>
+        </form>
+    </section>
+</main>
+
 <footer>
     <p>Todos los derechos reservados 2025 © Maria Rebeca Rosalia Xool May Developer</p>
 </footer>
