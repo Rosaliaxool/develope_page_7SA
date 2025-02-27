@@ -9,8 +9,32 @@
 
 html{
     /*convercion para web*/
-    font-size: 62.5%
-}
+    font-size: 62.5%;
+    font-family: Krub, Herlvertica, sans-serif;
+    /*para modelo de caja*/
+    box-sizing: border-box
+
+    }
+
+    *,*::before, *::after{
+        /*para modelo de caja*/
+        box-sizing: inherit;
+    }
+    /*tipografia*/
+    h1{
+        font-size: .8rem;
+    }
+    h2{
+        font-size: 2.8rem;
+    }
+    h3{
+        font-size: 1.8rem;
+    }
+    h1,h2,h3{
+        text-align: center;
+    }
+
+
     body{
         /*px es el estandar para navegadores*/
         font-size: 16px;
@@ -66,12 +90,70 @@ html{
     background-color: var(--Morado);
     color:var(--oscuro);
 }
-.hero
-backdrop-image: url("../img/hero.jpg");
-backdrop-repeat: no-repeat;
-/*cover cubre la imagen con todo el tamaño posible*/
-background-size: cover;
+.hero{
+    background-image: url( ../img/hero.jpg);
+    /*es la direccion de la imagen de fondo*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+    height: 450px;/*altura del elemento*/
+    position: relative; /*par amanipular la posicion, el padre simepre debe de ser relative*/
+    
+}
+.contenido-hero{
+    /*para manipuilar la pisicion, el hijo siempre debe de ser absolute*/
+    position: absolute;
+    background-color: rgba(0,0,0,.7);/*70%*/
+    width: 100%;
+    height: 100%;
+    /*alinear h y v*/
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contenido-hero p,
+.contenido-hero h2{
+    color: var(--blanco)
+}
+.ubicacion{
+    display: flex;
+    align-items: flex-end;
 
+}
+.boton{
+    background-color: var(--secundario);
+    color: var(--blanco);
+    /**/
+    padding: 1rem 3rem;
+    /*poner margen arriba*/
+    margin-top: 3rem;
+    /*tamaño de letra*/
+    font-size: 2rem;
+    /*quitar subbrayado*/
+    text-decoration: none;
+    /*mayusculas*/
+    text-transform: uppercase;
+    /*negritas*/
+    font-weight: bold;
+    /*borde redondeado*/
+    border-radius: .5rem;
+    /* ancho del boton*/
+    width: 10%;
+    /*alinear texto del boton */
+    text-align: center;
+}
+@media (min-width:768px){
+    .boton{
+        width: auto;
+    }
+
+}
+
+
+/*cover cubre la imagen con todo el tamaño posible*/
 /*apartir de aqui se puede editar el recuadro de contactos*/
 .formulario{
     width: min(60rem, 90%);
