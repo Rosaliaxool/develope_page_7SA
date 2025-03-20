@@ -1,4 +1,5 @@
 :root{
+    --blanco: #ffffff;
     --Morado:  #8a00ca;
     --oscuro: #212121;
     --primario: #ffc107;
@@ -12,32 +13,12 @@ html{
     font-size: 62.5%;
     font-family: Krub, Herlvertica, sans-serif;
     /*para modelo de caja*/
-    box-sizing: border-box
-
-    }
-
-    *,*::before, *::after{
-        /*para modelo de caja*/
-        box-sizing: inherit;
-    }
-    /*tipografia*/
-    h1{
-        font-size: .8rem;
-    }
-    h2{
-        font-size: 2.8rem;
-    }
-    h3{
-        font-size: 1.8rem;
-    }
-    h1,h2,h3{
-        text-align: center;
-    }
-
-
+    box-sizing: border-box;
+}
     body{
         /*px es el estandar para navegadores*/
         font-size: 16px;
+        background: linear-gradient(to top #e5c0f7 0%, var (--blanco) 100%);
     }
 .titulo{
     text-align: center;
@@ -45,36 +26,22 @@ html{
 }
 .titulo span{
     font-size: 2rem;
+    font-style: italic;
+    color: #037bb3;
 }
-/*.navegacion-principal{
-    background-color: var(--secundario);
-}*/
-.contenedor{
-    
-    max-width: 120rem;
-    /*margin-top: 0;
-    margin-right: auto;
-    margin-bottom: 0;
-    margin-left: auto;*/
-    margin: 0 auto;
-}
-.nav-bg{
+
+
+.navegacion-principal{
     background-color: var(--secundario);
 }
-.navegacion-principal a{
-    background-color: var(--secundario);
-    color: var(--blanco);
-    /*quitar subbrayado*/
-    text-decoration: none;
-    padding: 1rem;
-}
+
 .navegacion-principal {
-    /*padding: 1 rem;*/
+    padding: 1 rem;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    /*justifi-content para filas y align-items para columnas*/
-    /*justify-content: space-between;*/
+    align-content: space-between;
+    justify-content: space-between;
     font-size: 2rem;
     font-weight: bold;
 } 
@@ -85,11 +52,29 @@ html{
         justify-content: space-between;
     }
 }
+.navegacion-principal a{
+    background-color: var(--secundario);
+    color: var(--blanco);/*quitar subbrayado*/
+    text-decoration: none;
+    padding: 1rem;
+}
 
 .navegacion-principal a:hover{
     background-color: var(--Morado);
     color:var(--oscuro);
 }
+.nav-bg{
+    background-color: var(--secundario);
+}
+.contenedor{
+    
+    max-width: 120rem;
+    margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin: 0 auto;}
+
 .hero{
     background-image: url( ../img/hero.jpg);
     /*es la direccion de la imagen de fondo*/
@@ -103,55 +88,106 @@ html{
     position: relative; /*par amanipular la posicion, el padre simepre debe de ser relative*/
     
 }
-.contenido-hero{
+.contenido-hero {
     /*para manipuilar la pisicion, el hijo siempre debe de ser absolute*/
     position: absolute;
     background-color: rgba(0,0,0,.7);/*70%*/
     width: 100%;
     height: 100%;
+    display: flex;
     /*alinear h y v*/
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-.contenido-hero p,
-.contenido-hero h2{
-    color: var(--blanco)
+
+
+
+.contenido-hero p{
+    color:#ffffff ;
+}
+.contenido-hero h1{
+    color:#ffffff 
+}
+h1{
+    font-size: 3.8rem;
+    text-align: center;
+}
+h2{
+    font-size: 2.8rem;
+    text-align: center;
+}
+h3{
+    font-size: 1.8rem;
+    text-align: center;
 }
 .ubicacion{
     display: flex;
-    align-items: flex-end;
+    align-items: center;
+    justify-content: center;
+}
+.servicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: column;
+}
 
-}
-.boton{
-    background-color: var(--secundario);
-    color: var(--blanco);
-    /**/
-    padding: 1rem 3rem;
-    /*poner margen arriba*/
-    margin-top: 3rem;
-    /*tamaño de letra*/
-    font-size: 2rem;
-    /*quitar subbrayado*/
+/*boton*/
+.contenido-hero a{
+    color: #ffffff;
     text-decoration: none;
-    /*mayusculas*/
-    text-transform: uppercase;
-    /*negritas*/
-    font-weight: bold;
-    /*borde redondeado*/
-    border-radius: .5rem;
-    /* ancho del boton*/
-    width: 10%;
-    /*alinear texto del boton */
-    text-align: center;
+    font-size: 2rem;/*tamaño del boton*/
+    border: 2px solid #ffffff;/*borde blanco*/
+    padding: 1rem 2rem;/*tamaño del recuadro del boton*/
+    background-color: var(--secundario);
 }
+
+
+
+
+
 @media (min-width:768px){
-    .boton{
-        width: auto;
+    .servicio{
+    display: grid;
+    /*define el area de las columnas*/
+    /*grid-template-columns: 1fr 1fr 1fr;*/
+    /*grid-template-columns: 33.33% 33.33% 33.33%; */
+    grid-template-columns: repeat(3, 1fr);/*repite 3 veces 1fr*/
+    column-gap: 1rem;
     }
 
 }
 
+.servicio{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.servicio h3 {
+    color: var(--secundario);
+    font-weight: normal;
+}
+
+
+p{
+    /* */
+    text-align: center;
+    line-height: 2;
+}
+
+.iconos{
+    width: 15rem;
+    height: 15rem;
+    background-color: var(--primario);
+    border-radius: 50%;/*apartir de 50% ya es un circulo*/
+    
+    display: flex;
+    /*evenly= uniformememnte*/
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 auto;
+}
 
 /*cover cubre la imagen con todo el tamaño posible*/
 /*apartir de aqui se puede editar el recuadro de contactos*/
